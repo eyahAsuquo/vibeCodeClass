@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#6c3aff" />
+  <meta name="description" content="Vibe Coding Class — Learn to build professional websites with AI. No coding required. Join the waitlist." />
+  <title>Vibe Coding Class – Build Websites With AI</title>
+
+  <!-- Performance: preconnect image CDN -->
+  <link rel="preconnect" href="https://images.pexels.com" crossorigin />
+  <link rel="dns-prefetch" href="//images.pexels.com" />
+
+  <!-- Pre-set theme to avoid FOUC (must be inline, before CSS) -->
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('vibe-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch(e){}
+    })();
+  </script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6c3aff"/><stop offset="1" stop-color="#3a8fff"/>
+          </linearGradient>
+        </defs>
+        <path d="M19 3L35 32H3L19 3Z" fill="url(#lg1)" opacity=".85"/>
+        <path d="M19 10L29 28H9L19 10Z" fill="url(#lg1)"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-brand">VIBE</span>
+        <span>CODING CLASS</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How It Works</a>
+      <a href="#waitlist">Waitlist</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light mode"></button>
+      <a href="https://t.me/+R1L1fbg1WiMzMmU0" target="_blank" rel="noopener" class="btn-primary btn-small">Join Waitlist</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features" onclick="closeMobile()">Features</a>
+    <a href="#how" onclick="closeMobile()">How It Works</a>
+    <a href="#waitlist" onclick="closeMobile()">Join Waitlist</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-blob blob1"></div>
+  <div class="hero-blob blob2"></div>
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Now Enrolling — Limited Seats</div>
+      <h1 class="hero-title">
+        Build <span class="grad-text">Websites</span><br/>
+        With <span class="grad-text ai">AI.</span>
+      </h1>
+      <p class="hero-sub-headline"><span>No Coding Required.</span></p>
+      <p class="hero-desc">
+        Learn how to create and launch <strong>professional websites</strong> — even if you've never written a single line of code.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://t.me/+R1L1fbg1WiMzMmU0" target="_blank" rel="noopener" class="btn-primary">🚀 Join the Waitlist</a>
+        <a href="#how" class="btn-outline">See How It Works</a>
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <picture>
+        <source
+          media="(max-width: 700px)"
+          srcset="https://images.pexels.com/photos/32704309/pexels-photo-32704309.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=760&w=760"
+        />
+        <img
+          src="https://images.pexels.com/photos/19805885/pexels-photo-19805885.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt="Smiling student learning websites with AI"
+          class="hero-img"
+          width="1200"
+          height="627"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
+      <div class="hero-float-card fc1">
+        <span class="fc-icon">💡</span>
+        <div>
+          <div class="fc-sub">Your Idea</div>
+          <div>Becomes a Website</div>
+        </div>
+      </div>
+      <div class="hero-float-card fc2">
+        <span class="fc-icon">🌐</span>
+        <div>
+          <div class="fc-sub">Live Online</div>
+          <div>In Days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step Flow -->
+  <div class="container">
+    <div class="step-flow reveal">
+      <div class="step-item"><div class="step-icon-wrap si1">💡</div><div class="step-label">Idea</div></div>
+      <div class="step-dots"><span></span><span></span><span></span></div>
+      <div class="step-item"><div class="step-icon-wrap si2">💬</div><div class="step-label">Prompt</div></div>
+      <div class="step-dots"><span></span><span></span><span></span></div>
+      <div class="step-item"><div class="step-icon-wrap si3">🛠️</div><div class="step-label">Build</div></div>
+      <div class="step-dots"><span></span><span></span><span></span></div>
+      <div class="step-item"><div class="step-icon-wrap si4">🚀</div><div class="step-label">Launch</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURES ══ -->
+<section id="features">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Why Vibe Coding Class?</span>
+      <h2 class="section-title">Everything You Need to <span class="grad-text">Succeed</span></h2>
+      <p class="section-desc">No tech background needed. We give you the tools, guidance, and confidence to build real websites that make real money.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon fi1">🚀</div>
+        <h3>Build Your First Website in Days</h3>
+        <p>Skip months of learning to code. With AI tools and our guided curriculum, you'll go from idea to live site in record time.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.1s">
+        <div class="feature-icon fi2">👤</div>
+        <h3>No Tech Background Needed</h3>
+        <p>Designed for absolute beginners. If you can type, you can build. Our step-by-step process makes it simple for everyone.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.2s">
+        <div class="feature-icon fi3">🖥️</div>
+        <h3>Launch Real Projects</h3>
+        <p>Build and deploy actual websites — not just tutorials. Create something you can add to your portfolio or start selling immediately.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.3s">
+        <div class="feature-icon fi4">📈</div>
+        <h3>Learn a Skill That Makes Money</h3>
+        <p>Web development is one of the most in-demand skills. Monetize your new ability by freelancing, building products, or getting hired.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section id="how">
+  <div class="container">
+    <div class="how-grid">
+      <div>
+        <span class="section-label reveal">The Process</span>
+        <h2 class="section-title reveal">From Idea to <span class="grad-text">Live Website</span></h2>
+        <p class="section-desc reveal" style="margin-bottom:36px">Our 4-step framework turns your vision into a fully functioning website — powered by AI, guided by us.</p>
+        <div class="how-steps">
+          <div class="how-step reveal">
+            <div class="how-step-num">1</div>
+            <div class="how-step-text">
+              <h4>💡 Start with Your Idea</h4>
+              <p>Every great website starts with a concept. We help you define and sharpen your idea so it's ready to build.</p>
+            </div>
+          </div>
+          <div class="how-step reveal" style="transition-delay:.1s">
+            <div class="how-step-num">2</div>
+            <div class="how-step-text">
+              <h4>💬 Write the Prompt</h4>
+              <p>Learn how to talk to AI tools effectively. The right prompts unlock incredibly powerful, professional-looking results.</p>
+            </div>
+          </div>
+          <div class="how-step reveal" style="transition-delay:.2s">
+            <div class="how-step-num">3</div>
+            <div class="how-step-text">
+              <h4>🛠️ Build with AI</h4>
+              <p>Use cutting-edge AI tools to generate, customize, and refine your website — all without writing complex code.</p>
+            </div>
+          </div>
+          <div class="how-step reveal" style="transition-delay:.3s">
+            <div class="how-step-num">4</div>
+            <div class="how-step-text">
+              <h4>🚀 Launch &amp; Go Live</h4>
+              <p>Deploy your site to the world. We walk you through going live so your website is accessible to everyone, everywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Terminal -->
+      <div class="how-visual reveal">
+        <div class="terminal" id="terminal" aria-hidden="true">
+          <div class="terminal-bar">
+            <div class="terminal-dot td1"></div>
+            <div class="terminal-dot td2"></div>
+            <div class="terminal-dot td3"></div>
+          </div>
+          <div class="terminal-line t-green">$ vibe build "My Portfolio Website"</div>
+          <div class="terminal-line" style="margin-top:10px"><span class="t-purple">✦ AI Analyzing</span> your idea...</div>
+          <div class="terminal-line"><span class="t-blue">▶ Generating</span> layout &amp; components</div>
+          <div class="terminal-line"><span class="t-blue">▶ Styling</span> with modern design system</div>
+          <div class="terminal-line"><span class="t-blue">▶ Optimizing</span> for mobile &amp; speed</div>
+          <div class="terminal-line" style="margin-top:10px"><span class="t-green">✓ Website built successfully!</span></div>
+          <div class="terminal-line"><span class="t-purple">▶ Deploying</span> to the web...</div>
+          <div class="terminal-line t-green" style="margin-top:6px">🌐 Live at: <span class="t-white">myportfolio.vibecode.app</span></div>
+          <div class="terminal-line" style="margin-top:10px">$ <span class="t-cursor"></span></div>
+        </div>
+        <p class="how-visual-label">✨ Your vision. AI power. Real impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WAITLIST ══ -->
+<section id="waitlist">
+  <div class="waitlist-blob wb1"></div>
+  <div class="waitlist-blob wb2"></div>
+  <div class="container">
+    <div class="waitlist-inner reveal">
+      <div class="waitlist-badge">🔒 Limited Seats Available</div>
+      <h2>Join the <span class="grad-text">Waitlist!</span></h2>
+      <p>Be the first to get access when we open enrollment. Early birds get the best seats — and possibly early-bird pricing.</p>
+
+      <a href="https://t.me/+R1L1fbg1WiMzMmU0" target="_blank" rel="noopener" class="waitlist-cta" id="waitlistCta">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M9.04 16.56l-.4 5.06c.58 0 .83-.25 1.13-.55l2.73-2.62 5.67 4.16c1.04.58 1.79.28 2.06-.98l3.73-17.47l.01-.02c.34-1.51-.55-2.1-1.55-1.76L2.04 9.47c-1.48.59-1.46 1.41-.26 1.79l5.04 1.57 11.69-7.36c.55-.36 1.05-.16.64.22l-9.9 9.35z"/>
+        </svg>
+        Join the Telegram Waitlist
+      </a>
+      <p class="subnote">🚀 Fastest way to get early access. Zero spam.</p>
+
+      <div class="seats-counter">
+        <span class="seats-text">Seats filled:</span>
+        <div class="seats-bar-wrap"><div class="seats-bar" id="seatsBar"></div></div>
+        <span class="seats-text"><span class="seats-pct" id="seatsPct">68%</span> full</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ══ -->
+<section id="cta">
+  <h2>Your Idea. AI Power. <em>Real Impact.</em></h2>
+  <p>Stop waiting. Start building. The next cohort fills up fast.</p>
+  <a href="https://t.me/+R1L1fbg1WiMzMmU0" target="_blank" rel="noopener" class="cta-btn-white">🚀 Secure Your Spot Now</a>
+  <p class="tagline">YOUR IDEA. AI POWER. <span>REAL IMPACT.</span></p>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-logo">
+    <svg width="32" height="32" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="lg2" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#6c3aff"/><stop offset="1" stop-color="#3a8fff"/>
+        </linearGradient>
+      </defs>
+      <path d="M19 3L35 32H3L19 3Z" fill="url(#lg2)" opacity=".85"/>
+      <path d="M19 10L29 28H9L19 10Z" fill="url(#lg2)"/>
+    </svg>
+    <span class="footer-brand">VIBE CODING CLASS</span>
+  </div>
+  <div class="footer-links">
+    <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#waitlist">Waitlist</a>
+    <a href="#">Privacy Policy</a>
+    <a href="https://t.me/+R1L1fbg1WiMzMmU0" target="_blank" rel="noopener">Contact</a>
+  </div>
+  <p>&copy; 2025 Vibe Coding Class. All rights reserved.</p>
+</footer>
+
+<!-- External JS -->
+<script src="main.js"></script>
+</body>
+</html>
